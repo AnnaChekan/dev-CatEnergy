@@ -1,0 +1,22 @@
+/* === BEGIN MEDIA === */
+
+/* ======================
+$mobile-small 240px
+$mobile-large 320px
+$tablet-small 480px
+$tablet-large 768px
+$screen-small 1024px
+$screen-large 1280px 
+====================== */
+
+@import "media_min_width576";
+@import "media_min_width768";
+@import "media_min_width1025";
+@import "media_min_width1200";
+
+@import "media_max_width1199";
+@import "media_max_width1024";
+@import "media_max_width767";
+@import "media_max_width575";
+
+/* === END MEDIA === */

@@ -1,0 +1,86 @@
+/* === BEGIN wp_pagenavi === */
+.more-peoducts {
+    margin: 80px auto 40px;
+    border: 1px solid $primary-color;
+    width: 180px;
+    height: 36px;
+    font-size: 16px;
+    padding-right: 27px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./assets/img/icon_download.png') no-repeat 150px !important;
+    &:hover {
+        text-decoration: none;
+        color: $text;
+        background: url('./assets/img/icon_download.png') no-repeat 150px $primary-color !important;
+    }
+}
+
+.wp-pagenavi {
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin: 0 auto 95px;
+    position: relative;
+
+    a {
+        text-decoration: none;
+        margin: 0 13px;
+    }
+
+    .first {
+        background: url('./assets/img/icon_pagination-left.png') no-repeat center;
+        padding: 10px 15px !important;
+
+        &:hover {
+            background: url('./assets/img/icon_pagination-left--hover.png') no-repeat center !important;
+        }
+
+    }
+
+    .last {
+        padding: 10px 15px !important;
+        background: url('./assets/img/icon_pagination-right.png') no-repeat center;
+
+        &:hover {
+            background: url('./assets/img/icon_pagination-right--hover.png') no-repeat center !important;
+        }
+    }
+
+    .previouspostslink {
+        background: url('./assets/img/icon-pagination__black-left.png') no-repeat center;
+        text-decoration: none;
+
+        &:hover {
+            background: url('./assets/img/icon-pagination__hover-left.png') no-repeat center;
+        }
+    }
+
+    .nextpostslink {
+        background: url('./assets/img/icon-pagination__black-right.png') no-repeat center;
+        text-decoration: none;
+
+        &:hover {
+            background: url('./assets/img/icon-pagination__hover-right.png') no-repeat center;
+        }
+    }
+
+    .first,
+    .last,
+    .previouspostslink,
+    .nextpostslink,
+    .page,
+    .current {
+        padding: 3px 5px;
+    }
+
+    .current {
+        color: $primary-color;
+        font-size: 16px;
+    }
+}
+
+/* === END wp_pagenavi === */
