@@ -36,4 +36,6 @@ jQuery(document).ready(function($) {
     if($('.post-item iframe').length){
         $('.post-item iframe').closest('p').addClass('iframe-box')
     }
+
+    $('.category-item').matchHeight();
 })

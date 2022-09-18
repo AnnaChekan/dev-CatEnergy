@@ -3,7 +3,8 @@
     margin-top: -111px;
     background: url(../../assets/img/first-screen.png) calc(50% + 114px) 163px no-repeat;
     position: relative;
-
+    margin-bottom: $section-margin;
+    
     &::before {
         content: "";
         width: 50vw;

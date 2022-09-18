@@ -12,9 +12,9 @@ $secondary-color: #F2F2F2;
 $primary-color-hover: #5EAA2F;
 
 /*grey*/
-$label-red: #F93838;
-$label-purpur: #8683EF;
-$label-green: #70D61F;
+//$label-red: #F93838;
+//$label-purpur: #8683EF;
+//$label-green: #70D61F;
 
 $required: $primary-color;
 $placeholder: #bdbdbd;
@@ -23,6 +23,10 @@ $placeholder: #bdbdbd;
 $font-size: 16px;
 $line-height: 1.5;
 $text: #000;
+
+/*margin-bottom*/
+$section-margin: 72px;
+
 
 /*   <Breadcrumbs/>   */
 $breadcrumbs-slash: $secondary-color;

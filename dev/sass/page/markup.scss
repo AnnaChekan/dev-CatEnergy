@@ -541,12 +541,13 @@ input[type=radio]:checked+label:before {
     position: fixed;
     bottom: 15px;
     left: 15px;
-    color: white;
+    color: $primary-color;
     padding: 5px 10px;
     background: black;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 5%;
+    
     &:hover{
-        color: #fec22d;
+        color: $secondary-color;
     }
 }
