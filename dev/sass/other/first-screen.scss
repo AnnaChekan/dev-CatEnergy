@@ -20,7 +20,7 @@
         min-height: 470px;
     }
 
-    h1.first-screen-title {
+    &-title {
         max-width: 414px;
         margin-bottom: 40px;
         font-family: $font-secondary;
@@ -28,10 +28,11 @@
         line-height: 60px;
     }
 
-    .first-screen-subtitle {
+    &-subtitle {
         max-width: 283px;
         margin-bottom: 52px;
         font-family: $font-secondary;
+        @extend .title-4;
         font-weight: 400;
         line-height: 20px;
         text-transform: uppercase;

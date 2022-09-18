@@ -19,7 +19,6 @@ header{
 
 		&:hover {
 		text-decoration: none;
-
 			&:before {
 				width: 100%;
 			}
@@ -27,11 +26,9 @@ header{
 	}
 
 	nav.navbar {
-			
 		&>.container-fluid {
-		align-items: end;
+		align-items: center;
 		}	
-
 		.navbar-nav .nav-link {
 			font-size: 20px;
 			line-height: 30px;
@@ -70,6 +67,4 @@ header{
 			box-shadow: none;
 		}
 	}	
-	
-	
 }
