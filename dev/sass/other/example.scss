@@ -1,0 +1,298 @@
+.example {
+    background-color: $secondary-color;
+    padding-bottom: $section-margin;
+    overflow: hidden;
+
+    &-row {
+        display: flex;
+        flex-direction: row;
+    }
+    &-title {
+        @extend .title-1;
+        line-height: 1;
+        font-family: $font-secondary;
+        color: $text;
+        margin-bottom: 70px;
+        padding-bottom: 76px;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100vw;
+            width: 200vw;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+        }
+    }
+    &-options {
+        max-width: 436px;
+        &-description {
+            font-size: 16px;
+            line-height: 24px;
+            font-family: $font-primary;
+            color: #444444;
+            margin-bottom: 69px;
+        }
+        &-parameter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            &-item{
+                display: flex;
+                flex-direction: column;
+                text-align: center;    
+                min-width: 162px;
+                font-size: 30px;
+                line-height: 37px;
+                font-family: $font-secondary;
+                color: $text;
+                border: 1px solid #CDCDCD;
+                border-radius: 3px;
+                padding: 15px 0 20px;
+                
+
+                span {
+                    font-size: 14px;
+                    line-height: 1;
+                    font-family: $font-primary;
+                    color: #444444;
+                    display: inherit;
+                    margin: 0 auto -27px;
+                    padding: 16px 9px 0;
+                    background: $secondary-color;                    
+                }
+            }
+        }
+
+        &-total {
+            font-family: $font-secondary;
+            @extend .title-4;
+            line-height: 1;
+            color: $text;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 40px;
+        }
+    }
+
+    &-slider {
+        position: relative;
+        &-wrapper{
+            width: 690px;
+            height: 450px;
+            position: absolute;
+            left:0px;
+            top:0px;
+            transform:translate3d(20%, -40%, 0);
+            overflow:hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            z-index: 1;
+        }
+        &-description {
+            @extend .title-4;
+            line-height: 30px;
+            font-family: $font-secondary;
+            text-transform: uppercase;
+            position: absolute;
+            top: 300px;
+            left: 200px;
+            span {
+                padding-right: 471px;
+            }
+        }
+    }
+       
+      /* Our image information */
+    .before,
+    .after {
+        width:100%;
+        height:100%;
+        background: center/cover no-repeat #CDCDCD;
+        position: absolute;
+        top:0;
+        left:0;
+        pointer-events:none;
+        overflow: hidden;
+    }
+      
+    .content-image{
+        height:100%;
+    }
+      
+    .after{
+        width:125px;
+    }
+      
+    .scroller{
+        width: 50px;
+        height:50px;
+        position: absolute;
+        left:100px;
+        top:50%;
+        transform:translateY(-50%);
+        border-radius:50%;
+        background-color: transparent;
+        opacity:0.9;
+        pointer-events:auto;
+        cursor: pointer;
+        
+        &:hover{
+            opacity:1;
+        }
+        
+        &__thumb{
+            width:100%;
+            height:100%;
+            padding:5px;
+        }
+        
+        &:before, &:after{
+        content:" ";
+        display: block;
+        width: 7px;
+        height: 9999px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.5px;
+        z-index: 30;
+        transition:0.1s;
+        }   
+        &:before{
+            top:100%;
+        }
+        &:after{
+            bottom:100%;
+        }
+    }
+       
+    .scrolling{
+        pointer-events:none;
+        opacity:1;
+        // z-index: 1;
+    }
+        
+      /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+    .scroller{
+        border: 5px solid rgb(99, 17, 17);
+        
+        &:before,&:after{
+        background: rgb(170, 100, 100);
+        }
+    }
+}
+
+
+/*slider before-after*/
+/* You can remove this page div in your website */
+/*#page{
+    width:100%;
+    height:100%;
+    position:absolute;
+}*/
+  
+  /* Our normalize css */
+/**{
+    margin:0;
+    box-sizing: border-box;
+}*/
+/*.example-slider {
+    position: relative;
+    &-wrapper{
+        width: 900px;
+        height: 600px;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate3d(-50%,-50%,0);
+        overflow:hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}*/
+   
+  /* Our image information */
+/*.before,
+.after {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-color: #CDCDCD;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow: hidden;
+}
+  
+.content-image{
+    height:100%;
+}
+  
+.after{
+    width:125px;
+}
+  
+.scroller{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    left:100px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background-color: transparent;
+    opacity:0.9;
+    pointer-events:auto;
+    cursor: pointer;
+    
+    &:hover{
+        opacity:1;
+    }
+    
+    &__thumb{
+        width:100%;
+        height:100%;
+        padding:5px;
+    }
+    
+    &:before, &:after{
+    content:" ";
+    display: block;
+    width: 7px;
+    height: 9999px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    z-index: 30;
+    transition:0.1s;
+    }   
+    &:before{
+        top:100%;
+    }
+    &:after{
+        bottom:100%;
+    }
+}
+   
+.scrolling{
+    pointer-events:none;
+    opacity:1;
+    // z-index: 1;
+}*/
+    
+  /* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
+/*.scroller{
+    border: 5px solid rgb(99, 17, 17);
+    
+    &:before,&:after{
+    background: rgb(170, 100, 100);
+    }
+} 
+*/
+

@@ -835,7 +835,7 @@ progress {
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
     .col-lg {
         flex: 1 0 0%
     }
@@ -1477,7 +1477,7 @@ progress {
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
     .col-lg-auto {
         flex: 0 0 auto;
         width: auto

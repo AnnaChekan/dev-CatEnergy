@@ -407,6 +407,7 @@ input[type=radio]:checked+label:before {
     }
 }
 
+
 .btn-secondary {
     color: #fff;
     background-color: $primary-color;
@@ -451,6 +452,8 @@ input[type=radio]:checked+label:before {
     }
 }
 
+
+
 /*12*/
 
 
@@ -482,7 +485,6 @@ input[type=radio]:checked+label:before {
     border-radius: 5px;
     &:hover {
         background-color: $primary-color;
-
     }
 }
 

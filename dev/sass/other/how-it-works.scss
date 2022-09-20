@@ -1,0 +1,58 @@
+.how-it-works {
+    margin-bottom: $section-margin;
+    &-title {
+        @extend .title-1;
+        font-family: $font-secondary;
+        line-height: 1;
+        margin-bottom: 35px;
+    }
+
+    ol{
+       li:before {
+        content: counter(li, decimal) "";
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: $font-secondary;       
+        font-size: 280px;
+        line-height: 1;
+        font-weight: 400;
+        color: #F2F2F2;
+        top: -35px;
+        left: inherit;
+        right: 0;
+        z-index: -1;
+        } 
+    }
+     
+    &_item {
+        max-width: 245px;
+        margin-bottom: 35px;
+
+        &-icon-box {
+            width: 80px;
+            height: 80px;
+            background: center no-repeat $primary-color;
+            margin-bottom: 31px;           
+        }
+        &-description {
+            font-family: $font-primary;
+            font-size: 16px;
+            line-height: 24px;
+            color: #444444;
+            
+        }
+    }
+}
+
+.icon-leaf {
+    background-image: url(../../assets/img/icon_leaf.svg);
+}
+.icon-tub {
+    background-image: url(../../assets/img/icon_tub.svg);
+}
+.icon-eat {
+    background-image: url(../../assets/img/icon_eat.svg);
+}
+.icon-alarm {
+    background-image: url(../../assets/img/icon_alarm.svg);
+}

@@ -18,9 +18,16 @@
         a {
             &.nav-link:before {
                 display: none;
-            }    
+            }  
+            &:hover {
+                opacity: 0.4;
+            }
+            &:active {
+                text-decoration-line: underline;
+                text-decoration-color: $primary-color;
+            } 
         }
-
+       
         .navbar-nav {
             padding: 36px 15px 12px;
         }
@@ -86,11 +93,11 @@
         &:before {
             content: '';
             width: 100vw;
-            background: url(../../assets/img/firs-screen-mobile-before.png) center/cover no-repeat;
+            background: url(assets/img/firs-screen-mobile-before.png) center/cover no-repeat;
         }
         &::after {
             content: '';
-            background: url(../../assets/img/first-screen.png) center/contain no-repeat;
+            background: url(assets/img/first-screen.png) center/contain no-repeat;
             width: 280px;
             height: 270px;
             display: block;
@@ -126,6 +133,7 @@
 
     /*category*/
     .category {
+       margin-bottom: $section-mobile-margin;
         .col-lg-6 {
             padding: 0 20px;
         }
@@ -179,6 +187,57 @@
                 }
             }
         }
+    }
+
+    /*how-it-works*/
+    .how-it-works {
+        margin-bottom: $section-mobile-margin;
+        &-title {
+           font-size: 36px;
+            font-family: $font-secondary;
+            line-height: 40px;
+            margin-bottom: 38px;
+        }
+    
+        ol{
+           li:before {
+            display: none;
+            } 
+        }
+         
+        &_item {
+            max-width: 279px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+    
+            &-icon-box {
+                width: 60px;
+                min-width: 60px;
+                height: 60px;
+                background: center no-repeat $primary-color;
+                margin: 0 20px 0 0;
+            }
+            &-description {
+                font-family: $font-primary;
+                font-size: 14px;
+                line-height: 18px;
+                color: #444444;
+                
+            }
+        }
+    }
+    .icon-leaf {
+        background-image: url(../../assets/img/icon_leaf.svg);
+    }
+    .icon-tub {
+        background-image: url(../../assets/img/icon_tub.svg);
+    }
+    .icon-eat {
+        background-image: url(../../assets/img/icon_eat.svg);
+    }
+    .icon-alarm {
+        background-image: url(../../assets/img/icon_alarm.svg);
     }
 }
 

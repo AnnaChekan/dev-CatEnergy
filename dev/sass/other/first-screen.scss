@@ -1,7 +1,7 @@
 .first-screen {
     padding-top: 223px;
     margin-top: -111px;
-    background: url(../../assets/img/first-screen.png) calc(50% + 114px) 163px no-repeat;
+    background: url(assets/img/first-screen.png) calc(50% + 114px) 163px no-repeat;
     position: relative;
     margin-bottom: $section-margin;
     
@@ -9,7 +9,7 @@
         content: "";
         width: 50vw;
         height: 100%;
-        background: url(../../assets/img/firs-screen-before.png) no-repeat;
+        background: url(assets/img/firs-screen-before.png) no-repeat;
         position: absolute;
         top: 0;
         right: 0;
