@@ -1,0 +1,38 @@
+.map {
+    position: relative;
+    &-info {
+        max-width: 570px;
+        width: 100%;
+        background: #fff;
+        padding: 60px 90px 50px 75px;
+        display: flex;
+        position: absolute;
+        top: 95px;
+        left: 110px;
+
+        &-title {
+            font-family: $font-secondary;
+            font-size: 20px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #111111;
+            width: 163px;
+            margin-right: 87px;
+        }
+        
+        address{
+            font-size: 16px;
+            line-height: 20px;  
+            color: #444444;
+            font-family: $font-primary;
+            width: 155px;
+            
+            .street {
+                padding-bottom: 19px;
+            }
+        }      
+    }
+   iframe {
+    width: 100%;
+    } 
+}

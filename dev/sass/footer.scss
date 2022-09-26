@@ -1,7 +1,56 @@
 footer{
-  height: 100px;
-  background: $primary-color;
-  margin-top: auto;
+  height: 149px;
+  background: $secondary-color;
+  //margin-top: auto;
+   .container {
+    margin-top: 63px;
+    display: flex;
+
+    .footer-logo {
+      width: 128px; 
+      margin-left: 110px;
+    }
+    
+    .social-media-sprites {
+      width: 130px;
+      height: 25px;
+      margin-left: 413px;
+
+      a{
+        background-image: url("assets/img/media-sprite.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding: 12px 15px;
+        &.vk {
+          background-position: left top;
+          &:hover {
+            background-position: left -22px;
+          }
+          &:active {
+            background-position: left -46px;
+          }
+        }
+        &.instagram {
+          background-position: -50px top;
+          &:hover {
+            background-position: -50px -22px;
+          }
+          &:active {
+            background-position: -50px -46px;
+          }
+        }
+        &.facebook {
+          background-position: -105px top;
+          &:hover {
+            background-position: -105px -22px;
+          }
+          &:active {
+            background-position: -105px -46px;
+          }
+        }     
+      }
+    }   
+  }
 }
 
  
