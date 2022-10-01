@@ -1,14 +1,13 @@
 footer{
   height: 149px;
   background: $secondary-color;
-  //margin-top: auto;
-   .container {
-    margin-top: 63px;
+  .container {
+    margin-top: 59px;
     display: flex;
 
-    .footer-logo {
+    .footer-logo-img {
       width: 128px; 
-      margin-left: 110px;
+      //margin-left: 110px;
     }
     
     .social-media-sprites {
