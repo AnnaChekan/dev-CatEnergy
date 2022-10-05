@@ -3,11 +3,11 @@
 		nav.navbar {
 			.navbar-nav {
 				.nav-link {
-				font-size: 20px;
-				line-height: 30px;
-				text-transform: uppercase;
-				color: #fff;
-				padding: 0;			
+					font-size: 20px;
+					line-height: 30px;
+					text-transform: uppercase;
+					color: #fff;
+					padding: 0;			
 				}
 			}
 		}
@@ -34,7 +34,7 @@
 	}
 }
 
-	
+
 
 header{
 	z-index: 2;
@@ -64,10 +64,10 @@ header{
 			}
 			&:hover {
 				text-decoration: none;
-					&:before {
-						width: 100%;
-					}
-				}	
+				&:before {
+					width: 100%;
+				}
+			}	
 		}
 		
 	}*/
@@ -75,12 +75,10 @@ header{
 	a {
 		font-family: $font-secondary;
 		position: relative;
-
 		&.nav-link:before {
 			content: "";
 			width: 0;
 			height: 2px;
-			//background-color: #fff;
 			background-color: #68B738;
 			position: absolute;
 			bottom: -8px;
@@ -88,16 +86,13 @@ header{
 			left: 50%;
 			transform: translate(-50%, 0);
 		}
-
 		&:hover {
 		text-decoration: none;
 			&:before {
 				width: 100%;
 			}
-		}	
-		
+		}
 	}
-
 	nav.navbar {
 		&>.container-fluid {
 		align-items: center;
@@ -106,10 +101,16 @@ header{
 			font-size: 20px;
 			line-height: 30px;
 			text-transform: uppercase;
-			//color: #fff;
 			color: #000;
-			padding: 0;			
-		}
+			padding: 0;	
+			position: relative;
+			&:hover {
+				opacity: .7;
+			}	
+			&:active {
+				opacity: .4;
+			}					
+		}		
 	}
 
 	.navbar {
@@ -117,8 +118,7 @@ header{
 			&:before {
 			display: none;
 			}
-		}
-		
+		}		
 	}
 	.nav-item {
 		padding: 0 0 0 32px;
@@ -129,8 +129,7 @@ header{
 	.navbar-collapse {
 		margin-left: auto;
 		flex-grow: 0;
-	}
-	
+	}	
 	.navbar-toggler {
 		padding: 0;
 		width: 36px;

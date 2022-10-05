@@ -1,0 +1,124 @@
+.additional-products {
+    margin-top: $section-margin;
+   
+    .container {
+        padding: 0;
+        .additional-products-title{
+            font-family: $font-secondary;
+            line-height: 1;
+            margin-bottom: 81px; 
+            span {
+               position: relative;
+               background: #FFFFFF;
+               padding: 0 40px;
+               margin-left:-40px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: -100vw;
+                    width: 200vw;
+                    height: 2px;
+                    background: $primary-color;
+                    z-index: -1;
+                }        
+            }            
+        }
+        .additional-product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 86px;
+            &-block {
+                &-table {
+                    width: 866px;   //смена ширины таб с 896px, чтобы отображалось все в пределах .container//
+                    height: 289px;
+                    border-collapse:collapse;
+                    border-spacing:0;
+                    .first-line {
+                        border-top: 1px solid #CDCDCD;
+                    }
+                    td {
+                        border-bottom: 1px solid #CDCDCD;
+                        padding: 0px;
+                        //padding: 3px;
+                        //width: 100%;
+                        //height: 35px;
+                        &.name-product {
+                            font-family: $font-secondary;
+                            font-size: 20px;
+                            line-height: 1;
+                            text-transform: uppercase;
+                            color: #222222;
+                        }
+                        &.kind {
+                            font-family: $font-primary;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #444444;
+                        }
+                        &.price {
+                            font-family: $font-primary;
+                            font-size: 16px;
+                            line-height: 20px;
+                            text-align: center;
+                            color: #444444;
+                        }
+                        .btn-table {
+                            height: 40px;
+                            //width: 244px;
+                            max-width: 244px;
+                            width: 100%;
+                            font-family: $font-secondary;
+                            font-size: 16px;
+                            line-height: 20px;
+                            padding: 7px 26px;
+                            margin: 15px 0;
+                            text-transform: uppercase;
+                            
+                        }
+                    }                            
+                }
+            }
+            .block-order {
+                position: relative;
+                margin-left: 80px;
+                &::before {
+                    content: "";
+                    background: url(assets/img/icon_gift.svg);
+                    width: 80px;
+                    height: 82px;
+                    position: absolute;
+                    top: 55px;
+                    left: 84px;
+                    z-index: 1;
+                }
+                &-btn{
+                    width: 245px;
+                    height: 289px;
+                    padding: 0;
+                    border: none;
+                    &:hover{
+                        opacity: .8;
+                    }
+                    &:active{
+                        opacity: .6;
+                    }
+                    &-text {
+                        font-family: $font-primary;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #FFFFFF;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        position: absolute;
+                        top: 184px;
+                        left: 41px;
+                        width: 161px;
+                    }
+                }
+            }
+        }        
+    }       
+}
+

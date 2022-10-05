@@ -1,0 +1,91 @@
+@@include('templates/head-form.html')
+@@include('templates/header.html')
+<main class="wrapper form">
+    <div class="container">
+        <h1 class="form-title">Подбор программы</h1> 
+        <div class="form-description">
+            <h4 class="form-title-block">Заполните анкету, и мы подберем программу питания для вашего кота</h4>
+        </div>
+        <form class="form-program">
+            <div class="form-row">
+                <div class="input-box">
+                    <div class="input-row">
+                        <label for="fname">ИМЯ:*</label>
+                        <input type="text" id="fname" name="fname" placeholder="БАРСИК">
+                    </div>
+                    <div class="input-row">
+                        <label for="weight">Вес (кг):*</label>
+                        <input type="text" id="weight" name="lname" placeholder="7"> 
+                    </div>
+                    <div class="input-row">
+                        <label for="age">Возраст (лет):</label>
+                        <input type="text" id="age" name="lname" placeholder="7"> 
+                    </div>                                        
+                </div>
+                <div class="radio-box">
+                    <div>
+                        <input type="radio" id="weight-loss" name="program" value="weight loss">
+                        <label for="weight-loss">похудение</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="mass-gain" name="program" value="mass gain">
+                        <label for="mass-gain">Набор массы</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="other" name="program" value="other">
+                        <label for="other">Не знаю (Нужен ваш совет)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <h2 class="form-row-title"><span>Контактные данные (владельца кота)</span></h2>  
+                <div class="input-row">
+                    <div class="contact">
+                        <div class="email">
+                            <label for="email">E-mail:*</label>
+                            <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com"> 
+                        </div>
+                        <div class="phone">
+                            <label for="phone">Телефон:*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(099) 666-66-66"> 
+                        </div>
+                    </div>
+                </div>                           
+            </div>  
+            <div class="form-row">
+                <h2 class="form-row-title"><span>Комментарий</span></h2>
+                <div class="input-row">
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>   
+            </div>           
+           <div class="form-row">
+                <h2 class="form-row-title"><span>Дополнительно</span></h2>  
+                <div class="check-box">
+                    <div>
+                        <input id="checkbox" type="checkbox" name="sweetener" checked="checked">
+                        <label for="checkbox">сахарозаменитель</label>
+                    </div>
+                    <div>
+                        <input id="checkbox2" type="checkbox" name="water">
+                        <label for="checkbox2">питьевая вода</label>
+                    </div>
+                    <div>
+                        <input id="checkbox3" type="checkbox" name="milk">
+                        <label for="checkbox3">молоко</label>
+                    </div>
+                    <div>
+                        <input id="checkbox4" type="checkbox" name="vitamins">
+                        <label for="checkbox4">витамины</label>
+                    </div>
+                </div> 
+            </div>
+            <div class="input-block">
+                <input class="btn btn-primary" type="submit" value="отправить заявку">
+                <div class="span"><span>* — Обязательные поля</span></div>
+            </div>            
+        </form>
+    </div>      
+    @@include('templates/map.html')
+</main>
+@@include('templates/footer.html')
+-

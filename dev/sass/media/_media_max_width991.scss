@@ -1,4 +1,66 @@
 @media screen and (max-width: 991px) {
+    .home-page {
+        header {
+            .navbar {
+                padding: 12px 8px 17px;
+                    > .container-fluid {
+                        align-items: center;
+                    }
+            }
+            nav.navbar {
+                .navbar-nav {
+                    .nav-link {
+                        color: #000;
+                    }
+                }
+            }
+            a {
+                &.nav-link:before {
+                    display: none;
+                }  
+                &:hover {
+                    opacity: 0.4;
+                }
+                &:active {
+                    text-decoration-line: underline;
+                    text-decoration-color: $primary-color;
+                } 
+            }           
+            .navbar-nav {
+                padding: 36px 15px 12px;
+            }    
+            .navbar-toggler {
+                position: relative;
+                &[aria-expanded="true"] {
+                    span {
+                        transform: rotate(45deg) translate(8.5px, 7px);
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(8.5px, -7px);
+                        }
+                    }
+                }
+                span {
+                    width: 100%;
+                    height: 3px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: black;
+                    &:nth-child(2) {
+                        top: 50%;
+                    }
+                    &:nth-child(3) {
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
     header {
         .navbar {
             padding: 12px 8px 17px;
@@ -6,7 +68,6 @@
                     align-items: center;
                 }
         }
-
         nav.navbar {
             .navbar-nav {
                 .nav-link {
@@ -14,7 +75,6 @@
                 }
             }
         }
-
         a {
             &.nav-link:before {
                 display: none;
@@ -425,15 +485,15 @@
     //map//
     .map {
         &-info {
-            max-width: 320px;
+            &.home {
+                background: #fff;
+            }
             width: 100%;
-            background: #fff;
+            background: #F2F2F2;
             padding: 28px 19px 22px;
             display: flex;
             position: static;
-            //top: 95px;
-            //left: 110px;
-    
+   
             &-title  {
                 font-family: $font-secondary;
                 font-size: 16px;
@@ -565,7 +625,7 @@
                         padding-bottom: 0px;
                     }
                     
-                    &-description-span {
+                    &-description {
                         font-size: 12px;
                         line-height: 16px;
                         font-family: $font-primary;
@@ -591,110 +651,304 @@
             }
         }
     }
-    /*.product-catalog {
-        margin-top: 0;
-        .col-lg-3 {
-            padding: 0 0 8px;
-        }
-        .row {
-           margin: 0 0 -8px;
-        }
-        .container {
-            padding-right: 0;
-            padding-left: 0;
-            .row>* {
-                padding-right: 0;
-                padding-left: 0;   
-            }
-        }
-
-        &-title {
-            font-family: $font-secondary;
-            font-size: 36px;
-            line-height: 1;
-            color: $text;
-            padding: 27px 0 41px 20px;
-            border-top: 1px solid #D9D9D9;
-            border-bottom: 1px solid #EBEBEB;
-            margin-bottom: 8px;
-        }
-        &-item {
-            width: 100%;
-            max-width: 320px;
-            height: 190px;
-            margin: 0 auto;
-            background: #fff;
-            text-align: center;
-            border-bottom: 1px solid #EBEBEB;
-            
-                        
-            .product-catalog-photo {
-                width: 68px;
-                margin-top: 25px;
-                margin-left: 56px;
-            }
     
-            .product-catalog-photo-big {
-                width: 84px;
-                margin-top: 22px;
-                margin-left: 48px;
-            }
-            &-block {
-                display: flex;
-                margin-bottom: 13px;
 
-                &-info.big {
-                    margin-left: 28px;
+    //additional-products//
+    .additional-products {
+    margin-top: $section-mobile-margin;
+    .container {
+        padding: 0;
+        .additional-products-title{
+            font-family: $font-secondary;
+            font-size: 24px;
+            line-height: 1;
+            margin-bottom: 35px; 
+            span {
+               position: relative;
+               background: #FFFFFF;
+               padding: 0 40px;
+               margin-left:-21px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 22px;
+                    left: -100vw;
+                    width: 200vw;
+                    height: 2px;
+                    background: $primary-color;
+                    z-index: -1;
+                }        
+            }            
+        }
+        .additional-product {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0px;
+            &-block {                          
+                &-table {
+                    .description {
+                        td{
+                           font-size: 16px; 
+                           padding: 0px;
+                        }
+                    }               
                 }
-                &-info {
-                    width: 142px;
-                    height: 102px;
-                    margin-left: 36px;
-                    margin-top: 11px;
-                    margin-bottom: 9px;
-                    padding-right: 14px;
-                    &-title{
-                        width: 76px;
+            }
+            .block-order {
+                margin: 39px auto 35px;
+                position: relative;
+                &::before {
+                    content: "";
+                    background: url(assets/img/icon_gift.svg);
+                    width: 80px;
+                    height: 82px;
+                    position: absolute;
+                    top: 55px;
+                    left: 80px;
+                    z-index: 1;
+                }
+                &-btn{
+                    max-width: 280px;
+                    width: 100%;
+                    height: 289px;
+                    z-index: 0;
+                    padding: 0;
+                    border: none;
+                    &:hover{
+                        opacity: .8;
+                    }
+                    &:active{
+                        opacity: .6;
+                    }
+                    &-text {
                         font-size: 16px;
                         line-height: 20px;
-                        color: #222222;
-                        text-align: left;
-                        text-transform: uppercase;
-                        margin-left: 0;
-                        padding-bottom: 0px;
+                        position: absolute;
+                        top: 184px;
+                        left: 40px;
+                        width: 161px;
                     }
-                    
-                    &-description {
-                        font-size: 12px;
-                        line-height: 16px;
-                        font-family: $font-primary;
-                        color: #444444;
-            
-                        &-span{
-                            border-bottom: 0;
-                            padding: 0px 0 2px;
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                    }    
-                }                                
+                }
             }
-                        
-            .btn-catalog {
-                width: 100%;
-                max-width: 280px;
-                height: 40px;
-                font-size: 16px;
-                //margin: 0 auto;
-                margin: 0 0 14px 0;
-                //margin-left: 20px;
-                padding: 10px 109px;
+        }        
+    }       
+}
+
+    //form//
+    .form {
+        margin-top: 27px;
+        .container {
+            margin-bottom: 33px;
+            padding: 0;
+        }
+        &-title {
+            font-family:$font-secondary;
+            font-size: 36px;
+            line-height: 1;
+            margin-bottom: 37px;
+            margin-left: 20px;
+        }
+        &-description {
+            max-width: 226px;
+            margin-left: 20px;
+            .form-title-block {
+                font-family:$font-secondary;
+                font-size: 14px;
+                line-height: 18px;
                 text-transform: uppercase;
+                color: $text;
+                margin: 0 auto 39px;         
             }
         }
-    }*/
-
-
+        &-program {
+            margin-bottom: 33px;
+            margin-left: 20px;
+            margin-right: 20px;
+            .form-row {
+                display: flex;
+                margin-bottom: 0px;
+                font-family: $font-secondary;                
+                .input-box {
+                    //width: 100%;
+                    width: 90vw;
+                    height: 163px;
+                    margin-bottom: 24px;  
+                }
+                .input-row {
+                    margin-bottom: 14px;
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 18px;                                           
+                             
+                    input, textarea {
+                        width: 100%;
+                        height: 45px;
+                        text-transform: uppercase;
+                        font-family: $font-secondary; 
+                        font-size: 16px;
+                        line-height: 18px; 
+                        margin-left: 14px;
+                        padding: 13px 15px;
+                        border: 1px solid #E7E7E7;
+                        &:focus-visible {
+                            outline: none;
+                        }                        
+                    }  
+                    .contact {
+                        display: flex;
+                        flex-direction: column;
+                        .email {
+                            margin-right: 0px;
+                            margin-bottom: 14px;
+                            position: relative; 
+                            &::before{
+                                content:"";
+                                background: url(../../assets/img/emeil.png) no-repeat;
+                                position: absolute;
+                                top: 16px;
+                                right: 15px;
+                                width: 19px;
+                                height: 14px;
+                                z-index: 1;
+                            }
+                            input {
+                                //width: 219px;
+                                width: 72vw;
+                            }
+                        }   
+                        .phone {
+                            position: relative;
+                            &::before{
+                                content:"";
+                                background: url(../../assets/img/phone.png) no-repeat;
+                                position: absolute;
+                                top: 13px;
+                                right: 13px;
+                                width: 20px;
+                                height: 20px;
+                                z-index: 1;
+                            }
+                            input {
+                                //width: 204px;
+                                width: 68vw;                                
+                            }
+                        } 
+                    }
+                    textarea {
+                        height: 150px; 
+                        width: 100vw; 
+                        margin-left: 0px                                
+                    } 
+                }              
+                
+                .radio-box {
+                    position: relative;
+                    width: 100%;
+                    max-width: 276px;
+                    height: 115px;
+                    margin: 20px 0 22px;
+                    border: none;
+                    padding: 0;      
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: -20px;
+                        left: -100px;
+                        height: 1px;
+                        width: 200vw;
+                        background: #D9D9D9;
+                    }  
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -22px;
+                        left: -100px;
+                        height: 1px;
+                        width: 200vw;
+                        background: #D9D9D9;
+                    }  
+                    input[type="radio"] + label {
+                        font-size: 16px;
+                        line-height: 18px;
+                        &:before {
+                            content: '';
+                            padding: 8px;
+                            margin-right: 16px;
+                            margin-bottom: 13px;
+                            width: 30px;
+                            height: 30px;
+                        }  
+                    }  
+                    input[type=radio]:checked+label:before {
+                        content: '';
+                        background: url("assets/img/radiobutton.svg") center/13px no-repeat;
+                    }      
+                }
+                .check-box {
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 33px;
+                    input[type="checkbox"] + label {
+                        font-size: 16px;
+                        line-height: 18px;
+                        &:before {
+                            content: '';
+                            padding: 5px;
+                            margin-right: 16px;
+                            margin-bottom: 13px;
+                            width: 30px;
+                            height: 30px;
+                        }    
+                    }                    
+                }
+    
+                &-title {
+                    width: 100%;
+                    max-width: 204px;
+                    font-size: 24px;
+                    line-height: 1.5;
+                    margin-top: 22px;
+                    margin-bottom: 33px;
+                    display: flex;
+                    span {
+                        position: relative;
+                        background: #FFFFFF;
+                        padding: 0 20px;
+                        margin-left:-21px;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 22px;
+                            left: -100vw;
+                            width: 200vw;
+                            height: 2px;
+                            background: $primary-color;
+                            z-index: -1;
+                        }  
+                    }
+                }
+            }
+            .input-block{
+                display: flex;
+                flex-direction: column;
+                input.btn {
+                    width: 100%;
+                    max-width: 280px;
+                    height: 40px;
+                    margin: 0 auto 21px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .span {
+                    font-size: 14px;
+                    line-height: 16px;
+                }                  
+            }
+        } 
+    }
+    
 
     footer{
         height: 236px;

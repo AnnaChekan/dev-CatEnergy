@@ -337,7 +337,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"]:checked + label:before {
-    background: url("../../assets/img/checkbox.svg") center no-repeat;
+    background: url("assets/img/checkbox.svg") center no-repeat;
 }
 
 input[type=radio]+label:before {
@@ -357,7 +357,7 @@ input[type=radio]+label:before {
 
 input[type=radio]:checked+label:before {
     content: '';
-    background: url(../../assets/img/radiobutton.svg) center/18px no-repeat;
+    background: url("assets/img/radiobutton.svg") center/18px no-repeat;
 }
 
 /*9-11*/
